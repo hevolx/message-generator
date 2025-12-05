@@ -1,8 +1,6 @@
 // What I want to achive: build a message generator program
-<!--
-1. every time a user runs a program, they should get a new, randomized nonsensical joke.
-2. the message that it outputs should be made up of at least three different pieces of data.
--->
+// 1. every time a user runs a program, they should get a new, randomized nonsensical joke.
+// 2. the message that it outputs should be made up of at least three different pieces of data.
 
 const yourSign = [
     "Your sign is Aries.",
@@ -162,3 +160,11 @@ const youShould = [
     "You should sleep under the stars.",
     "You should become who you are."
 ];
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+console.log(`${yourSign[getRandomInt(0, yourSign.length - 1)]}
+${yourHaving[getRandomInt(0, yourHaving.length - 1)]}
+${youShould[getRandomInt(0, youShould.length - 1)]}`);
